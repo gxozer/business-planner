@@ -34,6 +34,14 @@ For each meaningful competitor (direct and indirect substitutes):
 - What comparable products charge, and by what model (subscription, one-time, usage-based, commission).
 - Typical costs in the space: customer acquisition cost (CAC), gross margin, churn, if publicly known for comparable companies.
 
+## 6. Patent & IP landscape
+
+- Search Google Patents, USPTO, and WIPO (via `WebSearch`/`WebFetch`) for prior art covering the idea's core mechanism, method, or a distinctive technical feature — not the business model itself (business models are rarely patentable on their own).
+- For each relevant prior-art hit: patent/application number, holder, filing/grant date, and how closely it overlaps.
+- Note whether the overlap looks like a **freedom-to-operate risk** (something the business might infringe if built as described) versus just **adjacent art** (similar space, different mechanism).
+- Flag anything that looks like a real blocker as prominently as a saturated market or a regulatory blocker — don't bury it.
+- This is a landscape scan an AI assistant can do with web search, not a legal opinion. Always label it as such, and never state that something "is patentable" or "is clear to use" as a fact — describe what prior art was and wasn't found, and recommend a registered patent attorney or agent for an actual opinion before filing or relying on it.
+
 ## Source quality
 
 - Prefer primary or high-quality secondary sources: government/statistical agencies, industry association reports, reputable market research firms, company financial filings, direct competitor pricing pages.
