@@ -42,6 +42,12 @@ For each meaningful competitor (direct and indirect substitutes):
 - Flag anything that looks like a real blocker as prominently as a saturated market or a regulatory blocker — don't bury it.
 - This is a landscape scan an AI assistant can do with web search, not a legal opinion. Always label it as such, and never state that something "is patentable" or "is clear to use" as a fact — describe what prior art was and wasn't found, and recommend a registered patent attorney or agent for an actual opinion before filing or relying on it.
 
+## 7. Build & operating cost options
+
+- Concrete options for whatever the idea actually needs to run: cloud hosting/infra at relevant scale for software, manufacturing/tooling/fulfillment for physical goods, payment processing for a marketplace, the tooling stack for a service business.
+- Pull current pricing for 2–4 real options, at a stated scale assumption (e.g. "1,000 monthly active users," "500 units/month") — costs that aren't compared at the same scale are useless.
+- This feeds `cost-analysis.md` (see `references/cost-analysis-template.md`), not just a line in Financial Projections — the comparison itself, with trade-offs, is the point.
+
 ## Source quality
 
 - Prefer primary or high-quality secondary sources: government/statistical agencies, industry association reports, reputable market research firms, company financial filings, direct competitor pricing pages.

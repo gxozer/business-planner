@@ -66,7 +66,7 @@ Write this **last**, even though it's first in the document. One page max: the i
 Keep this simple and clearly labeled as illustrative unless the user supplies real figures:
 
 - Revenue projection table, 12–24 months, with the driving assumptions stated explicitly (e.g. customers × price × conversion rate).
-- Cost projection covering the same period.
+- Cost projection covering the same period, drawing the build/operate figures from the companion `cost-analysis.md` rather than inventing separate numbers — with a pointer to that file for the full option comparison, if one was produced.
 - Break-even estimate.
 - Funding ask and use of funds, if applicable.
 
