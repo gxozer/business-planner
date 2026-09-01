@@ -6,7 +6,7 @@ A [Claude Code](https://claude.com/claude-code) skill that researches a business
 
 Given a business idea (a sentence or two is enough to start), the skill:
 
-1. Asks a first, quick round of intake questions (idea, target customer, stage, geography), then immediately kicks off market/competitor/patent research in parallel using forked agents — it doesn't wait for a full interview before starting.
+1. Asks a first, quick round of intake questions (idea, target customer, stage, geography, the decision the plan needs to support, known constraints), then immediately forks parallel research agents — market sizing, competitors, patents, trends/regulation, and build/operating costs — rather than waiting for a full interview before starting.
 2. While that research runs, continues the interview with a more thorough second round (business model, go-to-market, team, financials) tailored to the idea's actual domain — SaaS, physical product, marketplace, service, hardware, or content — and adapts new questions to what the research is actually finding, surfacing a strong competitor or a blocking patent right away rather than waiting for the final draft.
 3. Drafts a structured business plan document, clearly flagging anything that's an assumption or estimate rather than a researched fact, and logs every intake question asked alongside its answer (or its open status) in an appendix.
 4. Saves everything as Markdown under `./business-plans/<idea-slug>/` in your project:

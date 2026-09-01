@@ -10,7 +10,7 @@ Identify the domain from the idea description itself; ask directly only if it's 
 - Self-serve signup, or sales-led onboarding?
 - What churn/retention benchmarks do comparable products see?
 - Integration or API requirements — what does it need to plug into?
-- Security/compliance needs (SOC 2, HIPAA, GDPR) given the target customer?
+- Security/compliance needs — SOC 2 (System and Organization Controls 2), HIPAA (Health Insurance Portability and Accountability Act), GDPR (General Data Protection Regulation) — given the target customer?
 - Anything requiring specialized engineering, or is it buildable on existing infrastructure?
 
 ## Physical Product / E-commerce / CPG
@@ -19,7 +19,7 @@ Identify the domain from the idea description itself; ask directly only if it's 
 - Unit economics: cost of goods sold, target margin, minimum order quantities?
 - Distribution: direct-to-consumer, retail, wholesale, or a mix?
 - Who handles fulfillment and shipping, and at what cost?
-- Regulatory requirements for the product category (FDA, CPSC, food safety, etc.)?
+- Regulatory requirements for the product category — FDA (Food and Drug Administration), CPSC (Consumer Product Safety Commission), food safety, etc.?
 - Packaging and returns handling?
 
 ## Marketplace / Platform
@@ -40,7 +40,7 @@ Identify the domain from the idea description itself; ask directly only if it's 
 
 - Current stage: concept sketch, working prototype, or pre-production?
 - Bill-of-materials cost at target volume, and how it changes with scale?
-- Certification requirements (UL, CE, FCC, etc.) for the target market?
+- Certification requirements — UL (Underwriters Laboratories), CE (Conformité Européenne), FCC (Federal Communications Commission), etc. — for the target market?
 - Manufacturing/tooling lead time and minimum viable order size?
 - Supply chain dependencies and single points of failure?
 

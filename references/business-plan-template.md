@@ -34,7 +34,7 @@ Write this **last**, even though it's first in the document. One page max: the i
 
 - Revenue streams and pricing model.
 - Cost structure: fixed vs. variable, major cost drivers.
-- Unit economics if estimable: CAC, gross margin, LTV, payback period — label all as estimates unless the user has real data.
+- Unit economics if estimable: CAC (Customer Acquisition Cost), gross margin, LTV (Customer Lifetime Value), payback period — label all as estimates unless the user has real data.
 
 ## Go-to-Market Strategy
 

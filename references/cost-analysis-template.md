@@ -5,9 +5,10 @@ A companion document comparing concrete implementation options and what they act
 Pull the relevant categories from the idea's domain (`references/domain-questions.md`) rather than covering all of them:
 
 - **SaaS / software**: cloud hosting (AWS/GCP/Azure/Vercel/Railway/etc.) at relevant scale, managed vs. self-hosted services, third-party API costs (payments, email, auth, analytics).
-- **Physical product / hardware**: manufacturing options (in-house vs. contract manufacturer vs. white-label), tooling costs, fulfillment/3PL options.
+- **Physical product / CPG**: manufacturing options (in-house vs. contract manufacturer vs. white-label), fulfillment/3PL options.
 - **Marketplace**: payment processing options and their fee structures, hosting.
 - **Service business**: the software/tooling stack needed to deliver and scale (scheduling, CRM, delivery platform).
+- **Hardware**: manufacturing/tooling costs at target volume, certification costs, supply chain options.
 - **Content / media**: hosting/CDN, distribution platform fees (app store cuts, platform revenue splits).
 
 ## Entry format

@@ -23,7 +23,7 @@ For each risk:
 - **Likelihood**: low / medium / high, with the reasoning in one line.
 - **Impact**: what happens to the business if it materializes.
 - **Mitigation**: what reduces the likelihood or impact.
-- **Monitoring / trigger**: the concrete signal that means this risk is materializing (e.g. "CAC exceeds $80 for two consecutive months," "a competitor announces a product in this exact niche") — so it's watched for, not just written down once.
+- **Monitoring / trigger**: the concrete signal that means this risk is materializing (e.g. "CAC (Customer Acquisition Cost) exceeds $80 for two consecutive months," "a competitor announces a product in this exact niche") — so it's watched for, not just written down once.
 
 ## Sources
 
