@@ -34,6 +34,17 @@ For each meaningful competitor (direct and indirect substitutes):
 - What comparable products charge, and by what model (subscription, one-time, usage-based, commission).
 - Typical costs in the space: customer acquisition cost (CAC), gross margin, churn, if publicly known for comparable companies.
 
+## 6. Patent & IP landscape
+
+- Search Google Patents, USPTO, and WIPO (via `WebSearch`/`WebFetch`) for prior art covering the idea's core mechanism, method, or a distinctive technical feature — not the business model itself (business models are rarely patentable on their own).
+- Flag anything that looks like a real freedom-to-operate blocker as prominently as a saturated market or a regulatory blocker — don't bury it.
+- This is a landscape scan, not a legal opinion — never state that something "is patentable" or "is clear to use" as a fact. See `references/patent-applications-template.md` for the fields to capture per finding, the required disclaimer, and how to write it up.
+
+## 7. Build & operating cost options
+
+- Pull current pricing for 2–4 real implementation options relevant to the idea's domain, at a stated scale assumption (e.g. "1,000 monthly active users," "500 units/month") — costs that aren't compared at the same scale are useless.
+- See `references/cost-analysis-template.md` for the category breakdown by domain (hosting, manufacturing, payment processing, etc.) and how to write up the comparison — this feeds `cost-analysis.md`, not just a line in Financial Projections.
+
 ## Source quality
 
 - Prefer primary or high-quality secondary sources: government/statistical agencies, industry association reports, reputable market research firms, company financial filings, direct competitor pricing pages.
