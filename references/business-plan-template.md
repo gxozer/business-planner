@@ -2,6 +2,8 @@
 
 Section-by-section structure for the plan document. Use Markdown headings matching these, in this order. Omit a section only if it's genuinely not applicable (say why in one line rather than silently dropping it).
 
+A companion `agent-context.md` (see `references/agent-context-template.md`) is always produced alongside this plan — condensed, build-relevant context for a coding agent implementing the project, rather than for a human reader. Add a one-line pointer to it directly under the Executive Summary so a human reader knows it exists too.
+
 ## Executive Summary
 
 Write this **last**, even though it's first in the document. One page max: the idea, the target customer, the size of the opportunity, the business model in one line, and what's being asked for (funding, a decision, or just a plan to work from).

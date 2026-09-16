@@ -39,11 +39,25 @@ Rules:
 
 ### 3. Intake — round two, adaptive
 
-While round-one research runs in the background, continue the interview with a second, more thorough round covering the rest of the business-plan surface: business model and pricing intuition, go-to-market channels already considered, operational constraints, team, and financial assumptions. Don't run the same generic list for every idea — load `references/domain-questions.md` and use the question set for the idea's actual business-model domain (SaaS, physical product, marketplace, service, hardware, content/media), pulling from more than one set when an idea spans domains. Split this across a couple of focused rounds rather than one long form, and let the user skip anything they don't know — mark it as an open assumption instead of blocking on it.
+While round-one research runs in the background, continue the interview with a second, more thorough round covering the rest of the business-plan surface: business model and pricing intuition, go-to-market channels already considered, operational constraints, team, and financial assumptions. Don't run the same generic list for every idea — load `references/domain-questions.md` and use the question set for the idea's actual business-model domain (SaaS, physical product, marketplace, service, hardware, content/media), pulling from more than one set when an idea spans domains.
 
-Once research results start coming back, use them to drive further questions instead of sticking to a fixed script: if a strong incumbent turns up, ask how the idea differs from it; if the market looks saturated or a blocking patent surfaces, raise it immediately and ask how they want to proceed (narrow the niche, pivot, or continue anyway) rather than waiting until the full draft to surface it. Any RFC entry from step 2 gets its open question raised here too — don't let a real decision point sit unasked in a file the user might not read closely.
+Treat this as a frontier, not a fixed form: a question belongs in the current round only if what it depends on is already settled — an earlier answer, or a specific research track that's already landed. A question that depends on something still open (an unanswered question, or a research track still running) waits for a later round instead of being asked as a guess dressed up as a question. Most round-two questions are independent of each other and can go in the first round of this step; hold back only the ones with a real dependency — e.g. don't ask about pricing tiers before you know whether the model is freemium or usage-based. This is scoped to ordering within round two itself; it's not a full dependency tree across the whole intake, and it doesn't apply to round one's fixed list (step 1) at all. Let the user skip anything they don't know even when it's in the current round — mark it as an open assumption instead of blocking on it.
+
+Once research results start coming back, treat that as settling a prerequisite too, not just as color for the plan: if a strong incumbent turns up, ask how the idea differs from it; if the market looks saturated or a blocking patent surfaces, raise it immediately and ask how they want to proceed (narrow the niche, pivot, or continue anyway) rather than waiting until the full draft to surface it. A newly-landed research fact can unblock a question that was waiting on it — fold it into the next round rather than treating research and round-two questions as separate tracks.
+
+Any RFC entry from step 2 gets its open question raised here too — don't let a real decision point sit unasked in a file the user might not read closely. Present each RFC's open question numbered, with its recommendation on its own line, so the user can answer by number instead of composing a reply:
+
+```
+❓ **Q1 — Pricing model**: Per-seat or usage-based?
+
+➡️ Usage-based — comparable tools in this space bill by API calls, and per-seat pricing under-monetizes the low-seat/high-usage segment this idea targets.
+```
+
+The recommendation is a default to accept or override, not a decision already made on the user's behalf — say so if they push back on it.
 
 Keep a running log of every question asked across both rounds — the question, the answer given, or "open" if the user skipped it — as you go rather than trying to reconstruct it at the end. This becomes the plan's Open Questions Log (see `references/business-plan-template.md`).
+
+Before moving to step 4, summarize the shared understanding in a few lines — the idea as refined, the key decisions made (including resolved RFCs), and what's still marked as an open assumption — and ask the user to confirm it before drafting starts. Don't draft on a summary they haven't confirmed; a quick correction here is far cheaper than redoing seven documents after the fact.
 
 ### 4. Draft the plan
 
@@ -53,6 +67,8 @@ Write the plan as Markdown. Label every assumption or estimate inline (e.g. *"As
 
 ### 5. Output
 
+The file set below is the default (full-plan) output. If the user wants something lighter, see **Lean mode** below instead — it changes which of these get written, not the drafting step that precedes it.
+
 - Save the plan to `./business-plans/<idea-slug>/business-plan.md` in the user's current project (create the directory if needed). Tell the user the path.
 - Save a separate `./business-plans/<idea-slug>/patent-applications.md` alongside it, using `references/patent-applications-template.md` — one entry per plausible patent application angle found during research, each with the prior art it was checked against and a clear "not legal advice" flag. Skip this file only if research turns up genuinely nothing patentable (e.g. a pure business-model idea with no novel mechanism) — say so instead of forcing an empty document.
 - Save a separate `./business-plans/<idea-slug>/risks.md` alongside it, using `references/risk-document-template.md` — the full risk register (more risks, more mitigation/monitoring detail than fits in the plan's own Risks & Mitigations section). Skip this file if the main plan's own Risks & Mitigations section already covers everything adequately — don't force a companion doc with nothing extra in it. Keep a condensed top-5 summary and a pointer to this file in the main plan whenever it is produced.
@@ -60,6 +76,7 @@ Write the plan as Markdown. Label every assumption or estimate inline (e.g. *"As
 - Save a separate `./business-plans/<idea-slug>/rfcs.md` alongside it, using `references/rfc-template.md` — one entry per genuine multi-option decision point research turned up. Skip it entirely if none did; don't force an entry where research pointed clearly one way.
 - Save a separate `./business-plans/<idea-slug>/use-cases.md` alongside it, using `references/use-cases-template.md` — always include this one. Concrete Actor → Trigger → Scenario → Outcome scenarios for the target segments identified in Market Analysis, not personas or a feature list. Include a couple of edge-case scenarios that stress-test the value proposition, not only flattering ones.
 - Save a separate `./business-plans/<idea-slug>/cost-analysis.md` alongside it, using `references/cost-analysis-template.md` — concrete implementation-option comparisons (hosting providers, manufacturing options, third-party services, whatever the domain needs) with estimated costs at a stated scale, not just a cost-structure line. Skip it only if the idea genuinely has no build/operate decision to compare (e.g. a pure consulting practice). Feed the chosen option's cost into `implementation-plan.md`'s phase estimates and the Financial Projections cost table, rather than leaving disconnected numbers.
+- Save a separate `./business-plans/<idea-slug>/agent-context.md` alongside it, using `references/agent-context-template.md` — always include this one, in every mode including Lean mode. Written for a coding agent that will later implement the project, not a human stakeholder: settled vocabulary, the chosen build/cost options, resolved decisions that affect what gets built, use-case scenarios, and the full implementation plan — the things code decisions hinge on, kept small enough to load cheaply instead of pulling in the whole document set. Leaves out market sizing, competitive analysis, patent landscape, and financial projections entirely — those stay in the other documents.
 - Ask once, offering to publish **all** of the documents produced (not just the main plan) as polished Artifacts together, rather than picking one — if they say yes, follow the `artifact-design` skill for each before building it. Mention that Artifacts support inline comments, and explicitly invite them (and anyone they share the links with) to leave feedback there — that's a good way to gather input across the whole plan rather than one section at a time.
 - Keep the research sources list at the bottom of each document (a "Sources" section) so claims stay checkable.
 
@@ -67,11 +84,23 @@ Write the plan as Markdown. Label every assumption or estimate inline (e.g. *"As
 
 Treat the first draft as a draft. Invite the user to challenge assumptions, request deeper research on a specific section, or supply real numbers (traction, costs, pricing) to replace estimates. Update the same file in place rather than creating new versions, unless the user asks to branch into an alternative direction. When a previously open question gets answered during iteration, update both the relevant section and the Open Questions Log entry — don't leave it marked open once it's resolved. Likewise, when the user answers an RFC's open question, record the choice and reasoning in that `rfcs.md` entry and fold the decision into the relevant plan section instead of leaving both options standing.
 
-Up to seven files can exist per idea by this point — don't re-read all of them on every iteration turn. `business-plan.md` already carries a condensed pointer into each companion file (Solution summarizes `use-cases.md`, the IP section summarizes `patent-applications.md`, Risks summarizes `risks.md`, Milestones summarizes `implementation-plan.md`, Financial Projections summarizes `cost-analysis.md`, the Open Questions Log points at `rfcs.md`), so it works as its own index. Re-read `business-plan.md` first when resuming work, and only open a specific companion file in full when the user's request is actually about that file's details.
+Up to eight files can exist per idea by this point in full mode (fewer in Lean mode, below) — don't re-read all of them on every iteration turn. `business-plan.md` already carries a condensed pointer into each companion file (Solution summarizes `use-cases.md`, the IP section summarizes `patent-applications.md`, Risks summarizes `risks.md`, Milestones summarizes `implementation-plan.md`, Financial Projections summarizes `cost-analysis.md`, the Open Questions Log points at `rfcs.md`, and a note near the top points at `agent-context.md`), so it works as its own index. Re-read `business-plan.md` first when resuming work, and only open a specific companion file in full when the user's request is actually about that file's details.
+
+## Lean mode
+
+Two lighter alternatives to the full plan exist — ask which the user wants if it's unclear:
+
+- **One-page canvas** — a genuinely quick gut-check. No fixed procedure: just scale the template down ad hoc to whatever fits on a page.
+- **Lean mode** — more than a one-line gut-check but not a commitment to the full eight-document treatment (e.g. "is this idea worth pursuing further" rather than "give me the full plan to raise money on"). Unlike the one-page canvas, this has a concrete, repeatable procedure. Research (step 2) stays exactly as-is — parallel, all tracks — lean mode only changes what gets *written*, not what gets researched:
+  - **Output** (step 5): produce a single condensed `business-plan.md` instead of the full file set —
+    - Fold `use-cases.md` and `implementation-plan.md` into short sections of the condensed doc instead — a handful of use-case bullets under Solution, a short phased-milestone list under Milestones/Roadmap — rather than the separate files they always get in full mode.
+    - Fold any RFC's open question inline into the Open Questions Log, in the same numbered ❓/➡️ format, instead of a separate `rfcs.md`.
+    - Only write `risks.md`, `patent-applications.md`, or `cost-analysis.md` as a standalone file if research clears the same bar an RFC entry needs — a genuine blocking finding (a real patent conflict, a saturated market, a real build/operate trade-off) — not just "there's something to say" about the topic. Otherwise cover it briefly inline in the condensed doc's own section (Risks & Mitigations, IP section, Financial Projections cost table) and skip the file.
+    - The confirmation gate before drafting (end of step 3) still applies — lean mode changes what gets written, not whether the user confirms the shared understanding first.
+  - **Upgrading later**: if the user decides mid-iteration they want the full treatment after all, split the folded sections out into their own files using the templates and what's already been researched — don't restart research from scratch.
+  - `agent-context.md` is still produced as its own file in Lean mode, same as full mode — it's the one companion document that's always separate, in every mode, since its whole purpose is being small and separately loadable.
 
 ## Notes
 
 - This skill is for research and drafting, not financial or legal advice — say so if the user seems to be treating the projections as guaranteed rather than illustrative.
 - Patent research is a landscape scan, not legal advice — the disclaimer belongs in both the business plan's IP section and at the top of `patent-applications.md`, not just one of them. See `references/patent-applications-template.md` for the exact wording; don't restate or paraphrase it elsewhere.
-- If the user wants something lighter than a full plan (a one-page lean canvas, a quick gut-check), scale down the template rather than forcing every section — ask first if it's unclear which they want.
-- Parallel research (step 2) trades some cost/latency for speed — if the user is doing a very quick gut-check rather than a full plan, it's fine to research sequentially instead and skip forking agents.

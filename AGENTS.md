@@ -10,3 +10,4 @@
 
 - Ask clarifying questions when instructions are unclear rather than guessing.
 - Never commit or push code.
+- Never transition Jira tickets past **In Review** — leave the final move to **Done** to the user.
